@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:audio_book/Constants/app_colors.dart' as AppColors;
 
 class DetailAudioPage extends StatefulWidget {
-  const DetailAudioPage({Key? key}) : super(key: key);
+  final booksData;
+  final int index;
+  const DetailAudioPage({Key? key, required this.booksData, required this.index}) : super(key: key);
 
   @override
   State<DetailAudioPage> createState() => _DetailAudioPageState();
@@ -43,7 +45,10 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                 backgroundColor: Colors.transparent,
                 leading: IconButton(
                   icon: Icon(Icons.arrow_back_ios),
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.of(context).pop();
+                    advancePlayer.dispose();
+                  },
                 ),
                 actions: [
                   IconButton(
@@ -68,10 +73,11 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                     SizedBox(
                       height: screenHeight*0.1,
                     ),
-                    Text("The Water Cure", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, fontFamily: "Avenir"),),
-                    Text("Ammar Afzal", style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, fontFamily: "Avenir"),),
+                    Text(this.widget.booksData[this.widget.index]["title"], style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, fontFamily: "Avenir"),),
+                    Text(this.widget.booksData[this.widget.index]["text"], style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, fontFamily: "Avenir"),),
                     AudioFile(
-                      advancePlayer: advancePlayer
+                      advancePlayer: advancePlayer,
+                      audioPath: this.widget.booksData[this.widget.index]["audio"],
                     ),
                   ],
                 ),
@@ -97,7 +103,7 @@ class _DetailAudioPageState extends State<DetailAudioPage> {
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage(
-                          'assets/img/book1.jpg'
+                            this.widget.booksData[this.widget.index]["img"]
                         )
                       )
                     ),

@@ -4,41 +4,41 @@
     "title": "The Water Cure",
     "text": "Ammar Afzal",
     "img": "assets/img/book1.jpg",
-    "audio": "book1Voice.mp3"
+    "audio": "https://luan.xyz/files/audio/ambient_c_motion.mp3"
   },
   {
     "rating": "4.3",
     "title": "The Angry Bird",
     "text": "Dawood Afzal",
     "img": "assets/img/book2.jpg",
-    "audio": "book2Voice.mp3"
+    "audio": "https://luan.xyz/files/audio/nasa_on_a_mission.mp3"
   },
   {
     "rating": "4.8",
     "title": "The Black Hawk",
     "text": "Moiz Ur Rahman",
     "img": "assets/img/book3.jpg",
-    "audio": "book3Voice.mp3"
+    "audio": "https://luan.xyz/files/audio/ambient_c_motion.mp3"
   },
   {
     "rating": "5.0",
     "title": "Rose Petal",
     "text": "Uzair Khan",
     "img": "assets/img/book4.jpg",
-    "audio": "book4Voice.mp3"
+    "audio": "https://luan.xyz/files/audio/nasa_on_a_mission.mp3"
   },
   {
     "rating": "4.9",
     "title": "Let Us C",
     "text": "Muhammad Rana",
     "img": "assets/img/book5.jpg",
-    "audio": "book5Voice.mp3"
+    "audio": "https://luan.xyz/files/audio/ambient_c_motion.mp3"
   },
   {
     "rating": "3.8",
     "title": "Panda Pubg",
     "text": "Zain Abbas",
     "img": "assets/img/book6.jpg",
-    "audio": "book6Voice.mp3"
+    "audio": "https://luan.xyz/files/audio/nasa_on_a_mission.mp3"
   }
 ]
